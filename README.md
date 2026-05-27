@@ -56,3 +56,13 @@ ListView 顯示的欄位包含：
 100 單字已成功載入
 搜尋完成，共找到 8 筆資料
 已顯示全部，共 100 筆資料
+```
+<img width="1300" height="472" alt="image" src="https://github.com/user-attachments/assets/539e2de0-ad23-4ad7-8094-04b9baa7c764" />
+
+<img width="1304" height="471" alt="image" src="https://github.com/user-attachments/assets/1c04157d-5e3c-49b9-890a-247c68a133ad" />
+
+<img width="1305" height="472" alt="image" src="https://github.com/user-attachments/assets/e6524613-f20c-409d-bacb-035a048a2644" />
+
+<img width="1302" height="469" alt="image" src="https://github.com/user-attachments/assets/382244ac-b8b3-4ce5-8061-5296b884e665" />
+
+
