@@ -50,12 +50,64 @@ namespace TSVFile
             lvwWord.EndUpdate(); //重繪;
         }
 
+        /// <summary>
+        /// 根據關鍵字更新 ListView
+        /// </summary>
+        private void UpdateListView(string keyword)
+        {
+            lvwWord.BeginUpdate();
+            lvwWord.Items.Clear();
+
+            keyword = keyword.Trim().ToLower();
+
+            foreach (WordItem item in _WordList)
+            {
+                bool isMatch =
+                    item.Word.ToLower().Contains(keyword) ||
+                    item.Phonogram.ToLower().Contains(keyword) ||
+                    item.SoundPath.ToLower().Contains(keyword) ||
+                    item.Explain.ToLower().Contains(keyword);
+
+                if (isMatch)
+                {
+                    ListViewItem lvi = new ListViewItem(item.Word);
+                    lvi.SubItems.Add(item.Phonogram);
+                    lvi.SubItems.Add(item.SoundPath);
+                    lvi.SubItems.Add(item.Explain);
+
+                    lvwWord.Items.Add(lvi);
+                }
+            }
+
+            lvwWord.EndUpdate();
+
+            this.tsslMessage.Text = $"搜尋完成，共找到 {lvwWord.Items.Count} 筆資料";
+        }
         private void tsmiAbout_Click(object sender, EventArgs e)
         {
             // 顯示關於視窗
             about.ShowDialog(this);
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text;
+
+            if (keyword.Trim() == "")
+            {
+                MessageBox.Show("請輸入搜尋關鍵字", "提醒", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            UpdateListView(keyword);
+        }
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            UpdateListView();
+
+            this.tsslMessage.Text = $"已顯示全部，共 {_WordList.Count} 筆資料";
+        }
         private void tsmiOpen_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -100,5 +152,7 @@ namespace TSVFile
         {
             this.tsslMessage.Text = "";
         }
+
+
     }
 }
