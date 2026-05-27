@@ -52,6 +52,7 @@
             // 
             // mnsWord
             // 
+            this.mnsWord.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.mnsWord.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.mnsWord.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsWord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -128,6 +129,7 @@
             // 
             // lvwWord
             // 
+            this.lvwWord.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.lvwWord.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chWord,
             this.chPhonogram,
@@ -166,9 +168,11 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(554, 9);
+            this.lblSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblSearch.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblSearch.Location = new System.Drawing.Point(531, 3);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(41, 12);
+            this.lblSearch.Size = new System.Drawing.Size(67, 24);
             this.lblSearch.TabIndex = 3;
             this.lblSearch.Text = "搜尋：";
             // 
@@ -181,22 +185,24 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.Orange;
             this.btnSearch.Location = new System.Drawing.Point(700, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "搜尋";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnShowAll
             // 
+            this.btnShowAll.BackColor = System.Drawing.Color.Orange;
             this.btnShowAll.Location = new System.Drawing.Point(779, 3);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(75, 23);
             this.btnShowAll.TabIndex = 6;
             this.btnShowAll.Text = "顯示全部";
-            this.btnShowAll.UseVisualStyleBackColor = true;
+            this.btnShowAll.UseVisualStyleBackColor = false;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // frmTSVFile
